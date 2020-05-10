@@ -45,6 +45,10 @@ void LEDControl (Arguments *in, Reply *out)   {
     int on = y;
     int n = sprintf(strings, "/myled%d/write %d", led, on);
 
+    //close all led light
+ //   RPC::call("/myled1/write 1", outbuf);
+ //   RPC::call("/myled3/write 1", outbuf);
+
     strcpy(buffer, strings);
     if (success) {
         out->putData(buffer);
